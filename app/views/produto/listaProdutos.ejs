@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <%- include('../../public/menus/menuCliente.html') %>
+
+        <h1>Produtos</h1>
+
+        <% if (erros) { %>
+            <ul>
+                <% for (let i=0; i < erros.length; i++) { %>
+                    <li>
+                        <%= erros[i].msg %>
+                    </li>
+                    <% } %>
+            </ul>
+            <% } %>
+
+                <table>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th></th>
+                    </tr>
+                    <% produtos.forEach(produto=> { %>
+                        <tr>
+                            <td>
+                                <%= produto.descricao %>
+                            </td>
+                            <td>
+                                <%= produto.preco.toLocaleString('pt-BR', { style: 'currency' , currency: 'BRL' }) %>
+                            </td>
+                            <td><a href="/adicionar/<%= produtos[i].id %>">Adicionar ao carrinho</a></td>
+                        </tr>
+                        <% }) %>
+                </table>
+</body>
+
+</html>

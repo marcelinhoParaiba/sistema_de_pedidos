@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css"type="text/css">
+</head>
+<body>
+    <%- include('../../public/menuAdmin.html') %>
+    <h1>Carinho</h1>
+
+    <table>
+        <tr>
+            <th>Produtos</th>
+            <th>Preço</th>
+            <th></th>
+        </tr>
+        <% for(let i = 0; i <produtos.length; i++){%>
+        <tr>
+            <td><%= produtos[i].descricao %></td>
+            <td><%= produtos[i].preco %></td>
+            <td><a href="/produto/adicionar/<%= produtos[i].id%>">adicionar carrinho</a></td>
+        <% 
+        }
+        %>
+            </table>
+        </body>
+        </html>

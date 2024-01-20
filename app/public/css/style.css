@@ -1,0 +1,26 @@
+ul{   
+   
+     text-align: center;
+     background-color:rgb(138 138 153);
+  
+
+}
+li{
+    
+    display: inline;
+    
+}
+a{
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(90deg,rgb(222, 220, 223) 100%,rgb(166, 10, 172) 35%,rgb(131, 11, 155) 0%);
+}
+
+
+
+
